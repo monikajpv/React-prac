@@ -1,0 +1,17 @@
+.section1container {
+    display: flex;
+    margin-top: 100px;
+  }
+  .imgSection {
+    width: 40%;
+    text-align: center;
+  }
+  
+  img {
+    border-radius: 50%;
+  }
+  
+  .contentSection {
+    width: 60%;
+  }
+  
