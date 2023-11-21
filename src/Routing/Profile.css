@@ -1,0 +1,17 @@
+.profilecon{
+
+    display :flex;
+    width: 1200px;
+    height: 500px;
+    margin: 50px;
+    box-shadow: 0 0 10px green;
+}
+
+.profilecon .imagess{
+
+   width: 30%;
+}
+.profilecon .contents{
+    width: 70%;
+    background-color: aquamarine;
+}

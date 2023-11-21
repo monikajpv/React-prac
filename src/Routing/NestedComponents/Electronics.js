@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import axios from "axios";
 
 function Electronics() {
   let [state, setState] = useState([]);
-  const getData = () => {
+  useEffect(()=>{
+    getData();
+
+
+  },[])
+  const getData = ()=>{
     //write the logic to send request to the server
 
     axios

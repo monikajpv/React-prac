@@ -21,7 +21,7 @@ function App() {
     <div className='App' >
       <Nav isLoggedIn = {isLoggedIn}  setIsLoggedIn = {setIsLoggedIn}/> 
 
-      <Routes>
+       <Routes>
         <Route path="/product" element={<Product />}>
           <Route path="" element={<Navigate to="Electronics" />} /> 
           <Route path="electronics" element={<Electronics />} />
@@ -34,7 +34,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/cart" element={<Cart />} />
-      </Routes>
+      </Routes> 
 
       
     
