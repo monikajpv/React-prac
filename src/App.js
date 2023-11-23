@@ -12,7 +12,7 @@ import MensClothing from './Routing/NestedComponents/MensClothing';
 import WomensClothing from './Routing/NestedComponents/WomensClothing';
 import { Route,Routes,Navigate} from 'react-router-dom';
 
-
+import Users from './users/Users';
 function App() {
   let [isLoggedIn,setIsLoggedIn] = useState(false);
 
@@ -33,7 +33,7 @@ function App() {
 
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/user" element={<Users />} />
       </Routes> 
 
       

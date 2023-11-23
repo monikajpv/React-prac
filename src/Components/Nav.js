@@ -15,7 +15,7 @@ function Nav()
         <Link to="/">Home</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/product">Product</Link>
-        <Link to="/cart">Cart</Link>
+        <Link to="/user">User</Link>
 
         {/* {
             isLoggedIn ? <button>Logout</button>:null

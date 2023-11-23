@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import B from "./B";
-import mycontext from "./myContext";
+import mycontext from "./mycontext";
 
 function A() {
    let[state,setState]=useState("");

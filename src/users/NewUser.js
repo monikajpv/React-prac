@@ -1,7 +1,7 @@
 import React from "react";
-
 function NewUser() {
   return (
+    
     <div className="container mt-5">
       <div className="row">
         <div className="col-4"></div>
