@@ -1,27 +1,41 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-
-function UserDetails() {
-  let [users,setUsers]= useState([]);
-
-  useEffect( ()=>{
+function UserDetails(props) {
+  useEffect(() => {
     axios
-    .get("http://localhost:3000/results")
-    .then((res)=>{
-      console.log(res.data);
-      setUsers(res.data);
-  })
-    .catch(()=>{
-      alert( " error while getting the data");
-    });
-  },[])
+      .get("http://localhost:3000/results")
+      .then((res) => {
+        console.log(res.data);
+        props.state.setUsers(res.data);
+      })
+      .catch(() => {
+        alert("error whle getting the data");
+      });
+  }, []);
 
+  const deleteUser = (id) => {
+    axios
+      .delete(`http://localhost:3000/results/${id}`)
+      .then(() => {
+        axios
+          .get("http://localhost:3000/results")
+          .then((res) => {
+            console.log(res.data);
+            props.state.setUsers(res.data);
+          })
+          .catch(() => {
+            alert("error whle getting the data");
+          });
+      })
+      .catch(() => {
+        alert("error while deleting the user");
+      });
+  };
 
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col-2"></div>
-        <div className="col-8">
+        <div className="col-12">
           <table className="table table-hover">
             <thead className="table-dark">
               <tr>
@@ -33,37 +47,32 @@ function UserDetails() {
               </tr>
             </thead>
             <tbody>
-              {
-                users.length > 0 && users.map((user,index)=>{
-
-                  return<tr>
-                  <td> {user.name}</td> 
-                  <td> {user.email}</td> 
-                  <td> {user.phone}</td> 
-                  <td> <button className="btn btn-outline-success"> Update </button></td> 
-                  <td> <button className="btn btn-outline-danger"> Delete </button> </td>                    
-                   
-                  </tr>
-                })
-              }
-
-
-              {/* <tr>
-                <td>Raj Verma</td>
-                <td>raj@gmail.com</td>
-                <td>male</td>
-                <td>9999999999</td>
-                <td>
-                  <button className="btn btn-outline-success">Update</button>
-                </td>
-                <td>
-                  <button className="btn btn-outline-danger">Delete</button>
-                </td>
-              </tr> */}
-            
-             
-              
-              
+              {props.state.users.length > 0 &&
+                props.state.users.map((user, index) => {
+                  return (
+                    <tr>
+                      <td>{user.name}</td>
+                      <td>{user.email}</td>
+                      <td>{user.gender}</td>
+                      <td>{user.phone}</td>
+                      <td>
+                        <button className="btn btn-outline-success">
+                          Update
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          className="btn btn-outline-danger"
+                          onClick={() => {
+                            deleteUser(user.id);
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
             </tbody>
           </table>
         </div>

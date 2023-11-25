@@ -1,36 +1,37 @@
 {
-
-    "results" :  [
-
-        {
-            "name":"Monika Vishwakarma",
-
-            "email": "monikavishwa9@gmail.com",
-            
-            "phone":"348975834943"
-       
-       
-        },
-        {
-            "name":"Monika Vishwakarma",
-
-            "email": "monikavishwa9@gmail.com",
-            
-            "phone":"348975834943"
-       
-       
-        },
-        {
-            "name":"Monika Vishwakarma",
-
-            "email": "monikavishwa9@gmail.com",
-            
-            "phone":"348975834943"
-       
-       
-        }
-
-    ],
-    "posts":[{"id":"01"}],
-    "comment":[{"name": "Monika Vishwakarma"}]
+  "results": [
+    {
+      "name": "Monika Vishwakarma",
+      "email": "monikavishwa9@gmail.com",
+      "phone": "348975834943",
+      "gender": "female",
+      "id": 101
+    },
+    {
+      "name": "Manisha v",
+      "email": "mani@gmail.com",
+      "phone": "876874553",
+      "gender": true,
+      "id": 102
+    },
+    {
+      "name": "Anjali V",
+      "email": "anjali76@gmail.com",
+      "phone": "8378673223",
+      "gender": true,
+      "id": 103
+    }
+  ],
+  "posts": [
+    {
+      "id": "101",
+      "message": "hello",
+      "host": "India"
+    }
+  ],
+  "comment": [
+    {
+      "name": "Monika Vishwakarma"
+    }
+  ]
 }
