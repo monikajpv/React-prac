@@ -1,8 +1,8 @@
 import React from "react";
 import { useContext } from "react";
-import mycontext from "./mycontext";//import C from "./C";
+import myContext from "./myContext";
 function B() {
-  let imp = useContext(mycontext);
+  let imp = useContext(myContext);
 
 
   return (

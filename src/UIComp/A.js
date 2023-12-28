@@ -1,8 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import B from "./B";
-import mycontext from "./mycontext";
-
+import myContext from "./myContext";
 function A() {
    let[state,setState]=useState("");
    let[data,setData]=useState("");
@@ -19,14 +18,14 @@ function A() {
     >
       <h2>PARENT Component</h2>
        <input
-        type="text" placeholder="Enter product id"
+        type="text" placeholder="Enter  data"
           onChange={(e) => {
-          setState(e.target.value);
+          setState(e.target.value); 
         }}/> &nbsp;
       <button onClick={  () =>{setData(state)}  }>Submit</button> 
-      <mycontext.Provider value={data}> 
+      <myContext.Provider value={data}> 
       <B />
-      </mycontext.Provider> 
+      </myContext.Provider> 
     </div>
   );
  }

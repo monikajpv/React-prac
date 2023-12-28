@@ -1,7 +1,5 @@
 
-
 import { Component } from "react";
-
 class Profileclass extends Component{
     render(){
     return(
@@ -13,8 +11,6 @@ class Profileclass extends Component{
             <h2>Class Components</h2>
             
         </div>
-
-
 
     );
 }

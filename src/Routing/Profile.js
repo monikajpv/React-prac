@@ -2,7 +2,7 @@ import {useState, useRef} from "react";
 import "./Profile.css"
 
 function Profile(){
-    let checkboxref =useRef(null);
+    let checkboxref = useRef(null);
     let [theme,setTheme]= useState({
         bgColor:"white",
         textColor:"black",

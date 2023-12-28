@@ -1,6 +1,6 @@
 import Login from "./Login";
-import Home from "./Home";
-import { useState } from "react";
+import Home from "./Routing/Home";
+// import { useState } from "react";
 
 function Main({isLoggedIn,setIsLoggedIn}){
 
@@ -12,3 +12,4 @@ function Main({isLoggedIn,setIsLoggedIn}){
     
 }
 export default Main;
+
